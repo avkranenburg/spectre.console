@@ -22,6 +22,7 @@ public interface ICommandApp
     /// Runs the command line application with specified arguments.
     /// </summary>
     /// <param name="args">The arguments.</param>
+    /// <param name="token">The cancellation token.</param>
     /// <returns>The exit code from the executed command.</returns>
-    Task<int> RunAsync(IEnumerable<string> args);
+    Task<int> RunAsync(IEnumerable<string> args, CancellationToken token = default);
 }
